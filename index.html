@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binance Game</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1A1A1A;
+            color: white;
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #2B2B2B;
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .header div {
+            display: flex;
+            align-items: center;
+        }
+        .header div span {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .status {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        .status div {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            width: 30%;
+        }
+        .status div span {
+            display: block;
+            margin: 5px 0;
+        }
+        .main-value {
+            font-size: 3em;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-value img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%; /* Добавлено, чтобы изображение монеты было круглым */
+        }
+        .progress-bar {
+            margin: 20px 0;
+            position: relative;
+            height: 20px;
+            background-color: #444;
+            border-radius: 10px;
+        }
+        .progress-bar div {
+            background-color: #4CAF50;
+            height: 100%;
+            width: 60%;
+            border-radius: 10px;
+        }
+        .character {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .character img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #2B2B2B;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .level {
+            margin-top: 10px;
+            color: #AAA;
+        }
+        .bottom-menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2B2B2B;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-menu div {
+            text-align: center;
+        }
+        .bottom-menu img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <img src="hand-drawn-cardano-illustration_23-2149213702.jpg" alt="profile">
+            <span>Ivan Kalantarnichuk (CEO)</span>
+        </div>
+        <img src="https://via.placeholder.com/40" alt="Binance logo">
+    </div>
+    <div class="content">
+        <div class="status">
+            <div>
+                <span>Прибыль за тап</span>
+                <span>16</span>
+            </div>
+            <div>
+                <span>Монет для апа</span>
+                <span>10M</span>
+            </div>
+            <div>
+                <span>Прибыль в час</span>
+                <span>272,47K</span>
+            </div>
+        </div>
+        <div class="main-value">
+            <img src="hand-drawn-cardano-illustration_23-2149213702.jpg" alt="coin">
+            <span id="main-value">1 279 862</span>
+        </div>
+        <div class="progress-bar">
+            <div></div>
+        </div>
+        <div class="character">
+            <img src="OIG2.L9jS.jpg" alt="character" id="character-image">
+        </div>
+        
+    </div>
+    <div class="bottom-menu">
+        <div>
+            <img src="https://via.placeholder.com/40" alt="exchange">
+            <span>Exchange</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/40" alt="mine">
+            <span>Mine</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/40" alt="friends">
+            <span>Friends</span>
+        </div>
+        <div>
+            <img src="https://via.placeholder.com/40" alt="earn">
+            <span>Earn</span>
+        </div>
+        <div>
+            <img src="hand-drawn-cardano-illustration_23-2149213702.jpg" alt="airdrop">
+            <span>Airdrop</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('character-image').addEventListener('click', function() {
+            const mainValueElement = document.getElementById('main-value');
+            let currentValue = parseInt(mainValueElement.textContent.replace(/,/g, ''));
+            currentValue += 16;
+            mainValueElement.textContent = currentValue.toLocaleString();
+        });
+    </script>
+</body>
+</html>
